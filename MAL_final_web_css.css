@@ -1,0 +1,61 @@
+/* Full-page background with option for image and gradient overlay */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    /* Custom background image with fallback gradient */
+    background: 
+      url('background.jpg') no-repeat center center fixed, /* User's personal image */
+      linear-gradient(135deg, #6a0dad, #ff8c00, #ffd700, #000000);
+    background-size: cover, 300% 300%; /* Image fits screen; gradient animates */
+    animation: gradientAnimation 8s ease infinite; /* Smooth gradient animation */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Smooth gradient animation */
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Center container for button and text */
+  .container {
+    text-align: center;
+  }
+  
+  /* Heading style */
+  .title {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Button style */
+  button {
+    font-size: 18px;
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  /* Button hover effects */
+  button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
